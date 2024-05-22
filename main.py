@@ -28,10 +28,8 @@ def login():
     form = LoginForm()
     if request.method == 'POST' and form.validate_on_submit():
         return render_template("success.html")
-        #success()
     elif request.method == 'POST' and not form.validate_on_submit():
         return render_template("denied.html")
-        #denied()
     return render_template("login.html", form=form)
 
 
